@@ -1,55 +1,156 @@
----
-title: Portfolio
-icon: fa-th
-order: 2
----
+<!doctype html>
+<html lang="kr" data-bs-theme="auto">
+    <head>
+        <title>점심메뉴 정하기</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.122.0">
+        <meta name="theme-color" content="#712cf9">
 
-<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-  egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-  Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-  fusce hendrerit lacus ridiculus.</p>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <div class="row">
-    <div class="4u 12u$(mobile)">
-      <div class="item">
-        <a href="e2garden.cafe24.com" class="image fit"><img src="{{ 'assets/images/pic02.jpg' | relative_url }}" alt="건강의학기반 지식교류사이트" /></a>
-        <header>
-          <h3>Ipsum Feugiat</h3>
-        </header>
-      </div>
-      <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="Rhoncus Semper" /></a>
-        <header>
-          <h3>Rhoncus Semper</h3>
-        </header>
-      </div>
-    </div>
-    <div class="4u 12u$(mobile)">
-      <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic04.jpg' | relative_url }}" alt="Magna Nullam" /></a>
-        <header>
-          <h3>Magna Nullam</h3>
-        </header>
-      </div>
-      <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic05.jpg' | relative_url }}" alt="Natoque Vitae" /></a>
-        <header>
-          <h3>Natoque Vitae</h3>
-        </header>
-      </div>
-    </div>
-    <div class="4u 12u$(mobile)">
-      <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic06.jpg' | relative_url }}" alt="Dolor Penatibus" /></a>
-        <header>
-          <h3>Dolor Penatibus</h3>
-        </header>
-      </div>
-      <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic07.jpg' | relative_url }}" alt="Orci Convallis" /></a>
-        <header>
-          <h3>Orci Convallis</h3>
-        </header>
-      </div>
-    </div>
-  </div>
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
+
+            .form-signin {
+                max-width: 330px;
+                padding: 1rem;
+            }
+
+            .form-signin .form-floating:focus-within {
+                z-index: 2;
+            }
+
+            .form-signin input[type="email"] {
+                margin-bottom: -1px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            .form-signin input[type="text"] {
+                margin-bottom: 10px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+            }
+
+            .b-example-divider {
+                width: 100%;
+                height: 3rem;
+                background-color: rgba(0, 0, 0, .1);
+                border: solid rgba(0, 0, 0, .15);
+                border-width: 1px 0;
+                box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+
+            .b-example-vr {
+                flex-shrink: 0;
+                width: 1.5rem;
+                height: 100vh;
+            }
+
+            .bi {
+                vertical-align: -.125em;
+                fill: currentColor;
+            }
+
+            .nav-scroller {
+                position: relative;
+                z-index: 2;
+                height: 2.75rem;
+                overflow-y: hidden;
+            }
+
+            .nav-scroller .nav {
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: 1rem;
+                margin-top: -1px;
+                overflow-x: auto;
+                text-align: center;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .btn-bd-primary {
+                --bd-violet-bg: #712cf9;
+                --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+                --bs-btn-font-weight: 600;
+                --bs-btn-color: var(--bs-white);
+                --bs-btn-bg: var(--bd-violet-bg);
+                --bs-btn-border-color: var(--bd-violet-bg);
+                --bs-btn-hover-color: var(--bs-white);
+                --bs-btn-hover-bg: #6528e0;
+                --bs-btn-hover-border-color: #6528e0;
+                --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+                --bs-btn-active-color: var(--bs-btn-hover-color);
+                --bs-btn-active-bg: #5a23c8;
+                --bs-btn-active-border-color: #5a23c8;
+            }
+
+            .bd-mode-toggle {
+                z-index: 1500;
+            }
+
+            .bd-mode-toggle .dropdown-menu .active .bi {
+                display: block !important;
+            }
+        </style>
+
+    </head>
+    <body class="d-flex align-items-center py-4 bg-body-tertiary">
+        <main class="form-signin w-100 m-auto">
+            <div class="form-floating">
+                <video controls width="100%" autoplay="true">
+                    <source src="/Download.mp4" type="video/webm" />
+                </div>
+            <h1 class="h3 mb-3 fw-normal">골라골라</h1>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="txt" readonly="readonly">
+                <label for="floatingPassword">음식점 or 메뉴</label>
+            </div>
+            <button id="btn" class="btn btn-primary w-100 py-2" type="button">눌러</button>
+            <div class="mt-5 mb-3 text-body-secondary">&copy; 배고파</div>
+        </main>
+    </body>
+    <script>
+        let menu = ['설렁탕', '돈까스', '취원', '보배반점', '대흥장', 'n타워 지하 피자파스타', 'n타워 지하 분식', '오부대찌개', '스파게티 스토리', '쌀국수', '강된장', '햄버거', '라멘', '김치찌개', '초밥', '선매떡','우육면','해장국'];
+        let randomValue = '';
+        let isClick = true;
+        $('#btn').click(function(){
+            if(isClick){
+                isClick = false;                
+                randomValue = fn_randomMenu();
+                $('#txt').val(randomValue);                
+                isClick = true;
+            }
+        })
+
+        function fn_randomMenu(){
+            return  menu[Math.floor(Math.random() * menu.length)];
+        }
+    </script>
+</html>
+    
